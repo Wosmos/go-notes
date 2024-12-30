@@ -82,8 +82,11 @@ Animations are not just eye candy—they guide the user experience. Our ripple e
 ### **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/yourusername/not-just-another-todo.git
-cd not-just-another-todo
+mkdir go-notes
+cd go-notes
+
+git clone https://github.com/wosmos/go-notes.git .
+
 ```
 
 ### **2. Frontend Setup**
