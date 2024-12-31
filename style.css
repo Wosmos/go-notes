@@ -1,0 +1,159 @@
+ :root {
+     --surface-dark: #1a1a1a;
+     --surface-light: #f5f5f5;
+     --neu-dark-shadow1: #151515;
+     --neu-dark-shadow2: #1f1f1f;
+     --neu-light-shadow1: #d9d9d9;
+     --neu-light-shadow2: #ffffff;
+ }
+
+ .dark {
+     --surface: var(--surface-dark);
+     --neu-shadow1: var(--neu-dark-shadow1);
+     --neu-shadow2: var(--neu-dark-shadow2);
+ }
+
+ .light {
+     --surface: var(--surface-light);
+     --neu-shadow1: var(--neu-light-shadow1);
+     --neu-shadow2: var(--neu-light-shadow2);
+ }
+
+ .neu-shadow {
+     box-shadow: 8px 8px 16px var(--neu-shadow1),
+         -8px -8px 16px var(--neu-shadow2);
+ }
+
+ .neu-shadow-inset {
+     box-shadow: inset 8px 8px 16px var(--neu-shadow1),
+         inset -8px -8px 16px var(--neu-shadow2);
+ }
+
+ @keyframes slideDown {
+     0% {
+         transform: translateY(-100%);
+         opacity: 0;
+     }
+
+     100% {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ @keyframes scaleIn {
+     0% {
+         transform: scale(0.9);
+         opacity: 0;
+     }
+
+     100% {
+         transform: scale(1);
+         opacity: 1;
+     }
+ }
+
+ .slide-down {
+     animation: slideDown 0.3s ease-out;
+ }
+
+ .fade-in {
+     animation: fadeIn 0.3s ease-out;
+ }
+
+ .scale-in {
+     animation: scaleIn 0.3s ease-out;
+ }
+
+ /* Custom Scrollbar */
+ ::-webkit-scrollbar {
+     width: 8px;
+     height: 8px;
+ }
+
+ ::-webkit-scrollbar-track {
+     background: transparent;
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background: rgba(255, 255, 255, 0.2);
+     border-radius: 4px;
+ }
+
+ /* Quill Editor Customization */
+ .ql-toolbar.ql-snow {
+     border: none !important;
+     background: rgba(255, 255, 255, 0.05) !important;
+     border-radius: 12px;
+     margin-bottom: 1rem;
+     padding: 12px !important;
+ }
+
+ .ql-container.ql-snow {
+     border: none !important;
+     font-family: -apple-system, system-ui, sans-serif !important;
+ }
+
+ .ql-editor {
+     padding: 20px;
+     border-radius: 12px;
+     background: rgba(255, 255, 255, 0.02);
+     color: inherit;
+ }
+
+ /* Custom Alert */
+ .custom-alert {
+     position: fixed;
+     top: 20px;
+     right: 20px;
+     padding: 16px 24px;
+     border-radius: 12px;
+     z-index: 1000;
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     animation: slideDown 0.3s ease-out;
+ }
+
+ /* Theme Toggle Enhancement */
+ .theme-switch {
+     transition: transform 0.3s ease;
+ }
+
+ .theme-switch:hover {
+     transform: rotate(90deg);
+ }
+
+ /* Note Item Enhancement */
+ .note-item {
+     transition: all 0.3s ease;
+ }
+
+ .note-item:hover {
+     transform: translateY(-2px);
+ }
+
+ /* Button Animation */
+ .btn-animate {
+     transition: all 0.2s ease;
+ }
+
+ .btn-animate:active {
+     transform: scale(0.95);
+ }
+
+ /* Input Focus Effect */
+ input:focus,
+ select:focus {
+     outline: none;
+     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+ }
